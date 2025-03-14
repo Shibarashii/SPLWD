@@ -1,0 +1,23 @@
+/convert
+/admin/convert
+/dompdf
+Composer-Setup.exe
+/ilp
+/Mail
+/PHPWord-develop
+/principal/convert
+/pyodconverter-master
+/scss
+/secretary/convert
+/vendor
+/img/pyodconverter-master/
+
+.browserslistrc
+.travis.yml
+dompdf_0-7-0.zip
+dompdf-2.0.1.zip
+generated.docx
+html2pdf (1).zip
+html2pdf.zip
+IEP.docx
+PHPWord-develop.zip

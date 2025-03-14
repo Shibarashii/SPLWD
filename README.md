@@ -1,1 +1,1 @@
-# SoftEng2Finals
+# Software Engineering 2 - Finals
