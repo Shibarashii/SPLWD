@@ -1,6 +1,5 @@
-<?php 
-
-$word = new COM("Word.Application") or die ("Could not initialise Object.");
+<?php
+$word = new COM("Word.Application") or die("Could not initialise Object.");
 // set it to 1 to see the MS Word window (the actual opening of the document)
 $word->Visible = 0;
 // recommend to set to 0, disables alerts like "Do you want MS Word to be the default .. etc"
@@ -15,5 +14,3 @@ $word->ActiveDocument->ExportAsFixedFormat('yourdocument.pdf', 17, false, 0, 0, 
 $word->Quit(false);
 // clean up
 unset($word);
-
-?>

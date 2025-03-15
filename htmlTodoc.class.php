@@ -12,7 +12,6 @@ class HTML_TO_DOC
     var $title    = ''; 
     var $htmlHead = ''; 
     var $htmlBody = ''; 
-     
     /** 
      * Constructor 
      * 
@@ -23,7 +22,6 @@ class HTML_TO_DOC
         $this->htmlHead = ''; 
         $this->htmlBody = ''; 
     } 
-     
     /** 
      * Set the document file name 
      * 
@@ -36,7 +34,6 @@ class HTML_TO_DOC
         } 
         return;  
     } 
-     
     /** 
      * Set the document title 
      * 
@@ -45,7 +42,6 @@ class HTML_TO_DOC
     function setTitle($title){ 
         $this->title = $title; 
     } 
-     
     /** 
      * Return header of MS Doc 
      * 
@@ -57,7 +53,6 @@ class HTML_TO_DOC
         xmlns:o="urn:schemas-microsoft-com:office:office" 
         xmlns:w="urn:schemas-microsoft-com:office:word" 
         xmlns="http://www.w3.org/TR/REC-html40"> 
-         
         <head> 
         <meta http-equiv=Content-Type content="text/html; charset=utf-8"> 
         <meta name=ProgId content=Word.Document> 
@@ -133,7 +128,6 @@ class HTML_TO_DOC
 EOH; 
         return $return; 
     } 
-     
     /** 
      * Return Document footer 
      * 
@@ -142,7 +136,6 @@ EOH;
     function getFotter(){ 
         return "</body></html>"; 
     } 
- 
     /** 
      * Create The MS Word Document from given HTML 
      * 
@@ -155,13 +148,11 @@ EOH;
         if(is_file($html)){ 
             $html = @file_get_contents($html); 
         } 
-         
         $this->_parseHtml($html); 
         $this->setDocFileName($file); 
         $doc = $this->getHeader(); 
         $doc .= $this->htmlBody; 
         $doc .= $this->getFotter(); 
-                         
         if($download){ 
             @header("Cache-Control: ");// leave blank to avoid IE errors 
             @header("Pragma: ");// leave blank to avoid IE errors 
@@ -173,7 +164,6 @@ EOH;
             return $this->write_file($this->docFile, $doc); 
         } 
     } 
-     
     /** 
      * Parse the html and remove <head></head> part if present into html 
      * 
@@ -196,7 +186,6 @@ EOH;
         $this->htmlBody = $html; 
         return; 
     } 
-     
     /** 
      * Write the content in the file 
      * 

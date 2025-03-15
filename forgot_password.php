@@ -1,46 +1,107 @@
 <?php
-
 session_start();
 
+// Handle email confirmation and OTP generation
+include('connect.php');
+if (isset($_POST['confirm_email'])) {
+    $email = $_POST['email'];
+    $sql = "SELECT * FROM teachers WHERE email = '$email'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+
+    if ($row) {
+        $otp = rand(100000, 999999);
+        $_SESSION['otp'] = $otp;
+        $_SESSION['email'] = $email;
+        require "Mail/phpmailer/PHPMailerAutoload.php";
+        $mail = new PHPMailer;
+
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->Port = 587;
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+
+        $mail->Username = 'scdstacruz@gmail.com';
+        $mail->Password = 'aydsuollcolazzhk';
+
+        $mail->setFrom('qwertyqwerty0937@gmail.com', 'OTP Verification');
+        $mail->addAddress($_POST["email"]);
+
+        $mail->isHTML(true);
+        $mail->Subject = "Your verification code";
+        $mail->Body = "<p>Good Day, <br></p> <h3>Here is your OTP code $otp <br></h3>
+                       <br><br>
+                       <p>With regards,</p>
+                       <b>To our group</b>";
+
+        if (!$mail->send()) {
+            echo "<script>alert('Failed, Invalid Email');</script>";
+        } else {
+            echo "<script>
+                alert('OTP has been sent to your email!');
+                window.location.replace('otp_verification.php');
+            </script>";
+        }
+    } else {
+        echo "<script>
+            alert('Email not found');
+            window.location.replace('forgot_password.php');
+        </script>";
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin 2 - Forgot Password</title>
-
-    <!-- Custom fonts for this template-->
+    <title>Forgot Password</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.favicon.cc/favicon/121/664/favicon.png">
+    <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <!-- Inline CSS for centering and styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #4e73df;
+            background: linear-gradient(90deg, #4e73df 0%, #224abe 100%);
+        }
+        .container {
+            position: relative;
+            top: 30px;
+        }
+        .card {
+            margin: 1rem auto; 
+            padding: 1rem; 
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+    </style>
 </head>
-
 <body class="bg-gradient-primary">
-
     <div class="container">
-
-        <!-- Outer Row -->
         <div class="row justify-content-center">
-
             <div class="col-xl-10 col-lg-12 col-md-9">
-
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
                         <div class="row p-5">
-                        <div class="col-lg-6 d-none d-lg-block"><img src="img/SC.jfif" class="img-fluid" alt=""></div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img src="img/SC2.png" class="img-fluid" alt="">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -54,8 +115,6 @@ session_start();
                                                 placeholder="Enter Email Address...">
                                         </div>
                                         <input type="submit" name="confirm_email" value="Send OTP" class="btn btn-primary btn-user btn-block">
-                                            
-                                        
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -69,96 +128,16 @@ session_start();
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
+    <!-- Core plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
+    <!-- Custom scripts for all pages -->
     <script src="js/sb-admin-2.min.js"></script>
-
 </body>
-
-<?php
-include('connect.php');
-        if (isset($_POST['confirm_email'])) {
-            $email = $_POST['email'];
-
-            $sql = "SELECT * FROM teachers WHERE email = '$email'";
-
-            $result = $conn->query($sql);
-            $row = $result->fetch_assoc();
-           
-            if ($row) {
-				?>
-				echo '<script>window.location="otp_verification.php"</script>';
-				<script>
-                alert("<?php echo 'OTP sent to your email'?>");
-            	</script>
-				
-            </script>
-			<?php
-			if($result){
-				$otp = rand(100000,999999);
-				$_SESSION['otp'] = $otp;
-				$_SESSION['email'] = $email;
-				require "Mail/phpmailer/PHPMailerAutoload.php";
-				$mail = new PHPMailer;
-
-				$mail->isSMTP();
-				$mail->Host='smtp.gmail.com';
-				$mail->Port=587;
-				$mail->SMTPAuth=true;
-				$mail->SMTPSecure='tls';
-
-				$mail->Username='scdstacruz@gmail.com';
-				$mail->Password='aydsuollcolazzhk';
-
-				$mail->setFrom('qwertyqwerty0937@gmail.com', 'OTP Verification');
-				$mail->addAddress($_POST["email"]);
-
-				$mail->isHTML(true);
-				$mail->Subject="Your verification code";
-				$mail->Body="<p>Good Day, <br></p> <h3>Here is your OTP code $otp <br></h3>
-				<br><br>
-				<p>With regrads,</p>
-				<b>To our group</b>
-				";
-
-						if(!$mail->send()){
-							?>
-								<script>
-									alert("<?php echo "Failed, Invalid Email "?>");
-								</script>
-							<?php
-						}else{
-							?>
-							 <script>
-								alert("OTP has been sent to you email!");
-								window.location.replace("otp_verification.php");
-							</script>
-							<?php
-						}
-			}
-              
-            } else {
-				?>
-				<script>
-                alert("<?php echo 'Email not found'?>");
-				header('Location: forgotPass.php');
-            </script>
-			<?php
-            }
-        }
-        ?>
-
 </html>
