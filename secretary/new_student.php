@@ -63,7 +63,7 @@
                 <!-- iep -->
                 <div class="tab-pane fade" id="iep" role="tabpanel" aria-labelledby="progress-tab">
                     <div class="container-fluid">
-                        <h3><strong>Individualized Education Plan</strong></h3>
+                        <h3 style="color:black;" class="mb-3 mt-5"><strong>Individualized Education Plan</strong></h3>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="a1-tab" data-toggle="tab" href="#a1" role="tab" aria-controls="a1"
@@ -581,26 +581,26 @@
                         <?php $count++;
                         } ?>
                     </select>
-                    <label for="">Add student automatically create student folder please input Description</label><input type="text" name="folder_des">
-                    <h3 calss="mb-3 mt-5"><strong>Student Information</strong></h3>
+                    <label for=""> Folder description </label><input type="text" name="folder_des">
+                    <h3 class="mb-3 mt-5"><strong>Student Information</strong></h3>
                     <div class="row">
                         <div class="col-md-6">
                             <table align="left" class="table table-bordered">
                                 <tr>
-                                    <td>LRN:</td>
-                                    <td><input type="number" name="lrn" class="form-control" placeholder="Student LRN"></td>
+                                    <td style="color:black;">LRN:</td>
+                                    <td style="color:black;"><input style="color:black;" id="lrn" type="number" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="lrn" class="form-control" placeholder="Enter Learner Reference Number"></td>
                                 </tr>
                                 <tr>
-                                    <td>Category: </td>
-                                    <td> <select class="form-control" name="category" id="">
+                                    <td style="color:black;">Category: </td>
+                                    <td style="color:black;"> <select class="form-control" name="category" id="">
                                             <option value="Hearing impared Class">Hearing impared Class</option>
                                             <option value="Transition Class">Transition Class</option>
                                             <option value="Non-Graded Class">Non-Graded Class</option>
                                         </select></td>
                                 </tr>
                                 <tr>
-                                    <td>Status: </td>
-                                    <td> <select class="form-control" name="status" id="">
+                                    <td style="color:black;">Status: </td>
+                                    <td style="color:black;"> <select class="form-control" name="status" id="">
                                             <option value="Enrolled">Enrolled</option>
                                             <option value="Not enrolled">Not enrolled</option>
                                             <option value="Main Streamed">Main Streamed</option>
@@ -608,41 +608,41 @@
                                         </select> </td>
                                 </tr>
                                 <tr>
-                                    <td>First Name:</td>
-                                    <td>
-                                        <input type="text" name="fname" class="form-control" placeholder="First Name">
-                                        <input type="hidden" name="student_code" class="form-control" placeholder="Student Code">
+                                    <td style="color:black;">First Name:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="text" name="fname" class="form-control" placeholder="Enter First Name">
+                                        <input style="color:black;" type="hidden" name="student_code" class="form-control" placeholder="Student Code">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Last Name:</td>
-                                    <td>
-                                        <input type="text" name="lname" class="form-control" placeholder="Last Name">
+                                    <td style="color:black;">Last Name:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="text" name="lname" class="form-control" placeholder="Enter Last Name">
                                 </tr>
                                 <tr>
-                                    <td>Middle Name:</td>
-                                    <td>
-                                        <input type="text" name="mname" class="form-control" placeholder="Middle Name">
+                                    <td style="color:black;">Middle Name:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="text" name="mname" maxlength="1" class="form-control" placeholder="Enter Middle Name">
                                 </tr>
                                 <tr>
-                                    <td>Birth Date:</td>
-                                    <td><input type="date" name="birth_date" class="form-control" placeholder="Student Birth date"></td>
+                                    <td style="color:black;">Birth Date:</td>
+                                    <td style="color:black;"><input style="color:black;" type="date" name="birth_date" class="form-control" placeholder="Student Birth date"></td>
                                 </tr>
                                 <tr>
-                                    <td>Birth Place:</td>
-                                    <td><input type="text" name="birth_place" class="form-control" placeholder="Student Birth Place"></td>
+                                    <td style="color:black;">Birth Place:</td>
+                                    <td style="color:black;"><input style="color:black;" type="text" name="birth_place" class="form-control" placeholder="e.g., Pila, Laguna"></td>
                                 </tr>
                                 <tr>
-                                    <td>Gender:</td>
-                                    <td><select class="form-control" name="gender" id="">
-                                            <option value="">Gender</option>
+                                    <td style="color:black;">Gender:</td>
+                                    <td style="color:black;"><select class="form-control" name="gender" id="">
+                                            <option value=""> Select Gender</option>
                                             <option value="Female">Female</option>
                                             <option value="Male">Male</option>
                                         </select></td>
                                 </tr>
                                 <tr>
-                                    <td>Address:</td>
-                                    <td><select name="address" id="" class="form-control">
+                                    <td style="color:black;">Address:</td>
+                                    <td style="color:black;"><select name="address" id="" class="form-control">
                                             <option value="">Select Baranggay</option>
                                             <option value="Alipit">Alipit</option>
                                             <option value="Bagumbayan">Bagumbayan</option>
@@ -673,9 +673,15 @@
                                         </select>
                                 </tr>
                                 <tr>
-                                    <td>School:</td>
-                                    <td> <input type="text" class="form-control" value="<?php echo $_SESSION['school']; ?>" name="school" readonly></td>
+                                    <td style="color:black;">School:</td>
+                                    <td style="color:black;"> <select style="color:black;" type="text" class="form-control" value="" name="school">
+                                            <option value="SCES">SCES</option>
+                                            <option value="SCES">BES</option>
+                                            <option value="SCES">GES</option>
+                                        </select></td>
                                 </tr>
+                                <tr>
+
                                 <tr>
                                     <td>Teacher:</td>
                                     <td><select class="form-control" name="teacher" id="">
@@ -691,41 +697,49 @@
                                         </select></td>
                                     </td>
                                 <tr>
-                                    <td>Mother Tounge:</td>
-                                    <td><input type="text" name="m_tounge" class="form-control" placeholder="Mother Tounge"></td>
+                                    <td style="color:black;">Mother Tounge:</td>
+                                    <td style="color:black;"><input style="color:black;" type="text" name="m_tounge" class="form-control" placeholder="e.g., Filipino"></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="col-md-6 bg-light">
                             <table class="table table-bordered">
                                 <tr>
-                                    <td>Guardian Name:</td>
-                                    <td>
-                                        <input type="text" name="guardian" class="form-control" placeholder="Guardian Name">
+                                    <td style="color:black;">Guardian Name:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="text" name="guardian" class="form-control">
                                 </tr>
                                 <tr>
-                                    <td>Guardian Occupation:</td>
-                                    <td>
-                                        <input type="text" name="work" class="form-control" placeholder="Guardian Occupation">
+                                    <td style="color:black;">Guardian Occupation:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="text" name="work" class="form-control">
                                 </tr>
                                 <tr>
-                                    <td>Guardian Contact:</td>
-                                    <td><input type="text" name="guardian_contact" class="form-control" placeholder="Guardian Contact"></td>
+                                    <td style="color:black;">Guardian Contact:</td>
+                                    <td style="color:black;"><input style="color:black;" type="text" name="guardian_contact" class="form-control" placeholder="e.g., 09123456789"></td>
                                 </tr>
                                 <tr>
-                                    <td>Guardian email:</td>
-                                    <td>
-                                        <input type="email" name="email" class="form-control" placeholder="Guardian Email">
+                                    <td style="color:black;">Guardian email:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="email" name="email" class="form-control" placeholder="e.g., johndoe123@gmail.com">
                                 </tr>
                                 <tr>
-                                    <td>Guardian Mother Tounge:</td>
-                                    <td>
-                                        <input type="text" name="guardian_mtounge" class="form-control" placeholder="Guardian Mother Tounge">
+                                    <td style="color:black;">Guardian Mother Tounge:</td>
+                                    <td style="color:black;">
+                                        <input style="color:black;" type="text" name="guardian_mtounge" class="form-control">
                                 </tr>
+
                                 <tr>
-                                    <td>Teacher History:</td>
-                                    <td>
-                                        <input type="text" name="teacher_history" class="form-control" placeholder="Guardian Mother Tounge">
+                                    <td style="color:black;">Year Teacher History:</td>
+                                    <td> <select style="color:black;" type="number" name="date_history" class="form-control" placeholder="year">
+                                            <?php
+                                            $count = 2010;
+                                            $date = date('Y');
+                                            while ($count <= $date) { ?>
+                                                <option value="<?php echo $count; ?>"><?php echo $count; ?></option>
+                                            <?php $count++;
+                                            } ?>
+                                        </select></td>
                                 </tr>
                             </table>
                         </div>

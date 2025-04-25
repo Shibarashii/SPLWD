@@ -61,7 +61,7 @@
                 <!-- iep -->
                 <div class="tab-pane fade" id="iep" role="tabpanel" aria-labelledby="progress-tab">
                     <div class="container-fluid">
-                        <h3 style="color:black;"><strong>Individualized Education Plan</strong></h3>
+                        <h3 style="color:black;" class="mb-3 mt-5"><strong>Individualized Education Plan</strong></h3>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="a1-tab" data-toggle="tab" href="#a1" role="tab" aria-controls="a1"
@@ -581,16 +581,16 @@
                         } ?>
                     </select>
                     <br>
-                    <label for="">Add student automatically create student folder please input Description of the folder</label>
+                    <label for=""> Folder Description </label>
                     <br>
                     <input type="text" name="folder_des" class="form-control" style="width:500px;">
-                    <h3 style="color:black;" calss="mb-3 mt-5"><strong>Student Information</strong></h3>
+                    <h3 style="color:black;" class="mb-3 mt-5"><strong>Student Information</strong></h3>
                     <div class="row">
                         <div class="col-md-6">
                             <table align="left" class="table table-bordered">
                                 <tr>
                                     <td style="color:black;">LRN:</td>
-                                    <td style="color:black;"><input style="color:black;" id="lrn" type="number" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="lrn" class="form-control" placeholder="Student LRN"></td>
+                                    <td style="color:black;"><input style="color:black;" id="lrn" type="number" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="lrn" class="form-control" placeholder="Enter Learner Reference Number"></td>
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Category: </td>
@@ -612,19 +612,19 @@
                                 <tr>
                                     <td style="color:black;">First Name:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="fname" class="form-control" placeholder="First Name">
+                                        <input style="color:black;" type="text" name="fname" class="form-control" placeholder="Enter First Name">
                                         <input style="color:black;" type="hidden" name="student_code" class="form-control" placeholder="Student Code">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Last Name:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="lname" class="form-control" placeholder="Last Name">
+                                        <input style="color:black;" type="text" name="lname" class="form-control" placeholder="Enter Last Name">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Middle Name:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="mname" maxlength="1" class="form-control" placeholder="Middle Name">
+                                        <input style="color:black;" type="text" name="mname" maxlength="1" class="form-control" placeholder="Enter Middle Name">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Birth Date:</td>
@@ -632,12 +632,12 @@
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Birth Place:</td>
-                                    <td style="color:black;"><input style="color:black;" type="text" name="birth_place" class="form-control" placeholder="Student Birth Place"></td>
+                                    <td style="color:black;"><input style="color:black;" type="text" name="birth_place" class="form-control" placeholder="e.g., Pila, Laguna"></td>
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Gender:</td>
                                     <td style="color:black;"><select class="form-control" name="gender" id="">
-                                            <option value="">Gender</option>
+                                            <option value=""> Select Gender</option>
                                             <option value="Female">Female</option>
                                             <option value="Male">Male</option>
                                         </select></td>
@@ -696,7 +696,7 @@
                                     </td>
                                 <tr>
                                     <td style="color:black;">Mother Tounge:</td>
-                                    <td style="color:black;"><input style="color:black;" type="text" name="m_tounge" class="form-control" placeholder="Mother Tounge"></td>
+                                    <td style="color:black;"><input style="color:black;" type="text" name="m_tounge" class="form-control" placeholder="Enter Mother Tounge"></td>
                                 </tr>
                             </table>
                         </div>
@@ -705,31 +705,31 @@
                                 <tr>
                                     <td style="color:black;">Guardian Name:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="guardian" class="form-control" placeholder="Guardian Name">
+                                        <input style="color:black;" type="text" name="guardian" class="form-control" placeholder="Enter Guardian's Full Name">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Guardian Occupation:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="work" class="form-control" placeholder="Guardian Occupation">
+                                        <input style="color:black;" type="text" name="work" class="form-control" placeholder="Enter Occupation">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Guardian Contact:</td>
-                                    <td style="color:black;"><input style="color:black;" type="text" name="guardian_contact" class="form-control" placeholder="Guardian Contact"></td>
+                                    <td style="color:black;"><input style="color:black;" type="text" name="guardian_contact" class="form-control" placeholder="e.g., 09123456789"></td>
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Guardian email:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="email" name="email" class="form-control" placeholder="Guardian Email">
+                                        <input style="color:black;" type="email" name="email" class="form-control" placeholder="e.g., johndoe123@gmail.com ">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Guardian Mother Tounge:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="guardian_mtounge" class="form-control" placeholder="Guardian Mother Tounge">
+                                        <input style="color:black;" type="text" name="guardian_mtounge" class="form-control" placeholder="Enter Guardian's Mother Tounge">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Teacher History:</td>
                                     <td style="color:black;">
-                                        <input style="color:black;" type="text" name="teacher_history" class="form-control" placeholder="Recent teacher">
+                                        <input style="color:black;" type="text" name="teacher_history" class="form-control" placeholder="Enter Past Teacher's Name">
                                 </tr>
                                 <tr>
                                     <td style="color:black;">Year Teacher History:</td>
