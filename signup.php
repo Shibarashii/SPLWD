@@ -41,13 +41,13 @@
                                             <label class="form-label" for="bdate">First name</label>
                                             <input required type="text" name="fname" class="form-control" id="exampleFirstName"
                                                 value="<?php echo $_GET['fname']; ?>"
-                                                placeholder="First Name">
+                                                placeholder="Enter First Name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Contact Number</label>
                                             <input required type="number" name="contact_no" class="form-control" id="exampleLastName"
                                                 value="<?php echo $_GET['contact_no']; ?>"
-                                                placeholder="Contact Number">
+                                                placeholder="e.g., 09123456789">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -55,20 +55,20 @@
                                             <label class="form-label" for="bdate">Middle Name</label>
                                             <input required type="text" name="mname" class="form-control" id="exampleFirstName"
                                                 value="<?php echo $_GET['mname']; ?>"
-                                                placeholder="Middle Name">
+                                                placeholder="Enter Middle Name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Employee ID</label>
                                             <input required type="number" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="teacher_id" name="teacher_id" class="form-control" id="exampleLastName"
                                                 value="<?php echo $_GET['teacher_id']; ?>"
-                                                placeholder="Employee ID">
+                                                placeholder="Enter Employee ID">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label class="form-label" for="bdate">Last name</label>
                                             <input required type="text" name="lname" class="form-control" value="<?php echo $_GET['lname']; ?>"
-                                                id="exampleInputPassword" placeholder="Last Name">
+                                                id="exampleInputPassword" placeholder="Enter Last Name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">School</label>
@@ -83,7 +83,7 @@
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="">Gender</label>
                                             <select name="gender" id="" class="form-control">
-                                                <option value="Male">Gender</option>
+                                                <option value="Male">Select Gender</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                             </select>
@@ -91,7 +91,7 @@
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Email</label>
                                             <input required type="email" name="email" class="form-control" id="exampleLastName"
-                                                placeholder="Email">
+                                                placeholder="e.g., johndoe123@gmail.com">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -99,20 +99,20 @@
                                             <label for="">Address</label>
                                             <input required type="text" name="address" class="form-control" id="exampleFirstName"
                                                 value="<?php echo $_GET['address']; ?>"
-                                                placeholder="Address">
+                                                placeholder="Enter Address">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Password</label>
                                             <input required type="password" name="password" pattern="(?=.*\d)(?=.* 
      [a-z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?><]).{4,}" class="form-control" id="exampleLastName"
-                                                placeholder="Password">
+                                                placeholder="Enter Password">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label class="form-label" for="bdate">Birth Date</label>
                                             <input required type="date" name="bdate" class="form-control" id="exampleFirstName" value="<?php echo $_GET['bdate']; ?>"
-                                                placeholder="Address">
+                                                placeholder="Enter Address">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Confirm Password</label>
@@ -140,31 +140,31 @@
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label class="form-label" for="bdate">First name</label>
                                             <input required type="text" name="fname" class="form-control" id="exampleFirstName"
-                                                placeholder="First Name">
+                                                placeholder="Enter First Name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Contact Number</label>
                                             <input required type="number" name="contact_no" class="form-control" id="exampleLastName"
-                                                placeholder="Contact Number">
+                                                placeholder="e.g., 09123456789">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label class="form-label" for="bdate">Middle Name</label>
                                             <input required type="text" name="mname" class="form-control" id="exampleFirstName"
-                                                placeholder="Middle Name">
+                                                placeholder="Enter Middle Name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Employee ID</label>
                                             <input required type="number" maxlength="7" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="teacher_id" id="teacher_id" class="form-control" id="exampleLastName"
-                                                placeholder="Employee ID">
+                                                placeholder="Enter Employee ID">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label class="form-label" for="bdate">Last name</label>
                                             <input required type="text" name="lname" class="form-control"
-                                                id="exampleInputPassword" placeholder="Last Name">
+                                                id="exampleInputPassword" placeholder="Enter Last Name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">School</label>
@@ -179,7 +179,7 @@
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="">Gender</label>
                                             <select name="gender" id="" class="form-control">
-                                                <option value="Male">Gender</option>
+                                                <option value="Male">Select Gender</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                             </select>
@@ -187,26 +187,26 @@
                                         <div class="col-sm-6">
                                             <label class="form-label" for="bdate">Email</label>
                                             <input required type="email" name="email" class="form-control" id="exampleLastName"
-                                                placeholder="Email">
+                                                placeholder="e.g., john123@gmail.com">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="">Address</label>
                                             <input required type="text" name="address" class="form-control" id="exampleFirstName"
-                                                placeholder="Address">
+                                                placeholder="Enter Address">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="password">Password</label>
                                             <input required type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control"
-                                                id="exampleRepeatPassword" placeholder="Repeat Password">
+                                                id="exampleRepeatPassword" placeholder="Enter Password">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label class="form-label" for="bdate">Birth Date</label>
                                             <input required type="date" name="bdate" class="form-control" id="exampleFirstName"
-                                                placeholder="Address">
+                                                placeholder="Enter Address">
                                         </div>
                                         <div class="col-sm-6">
                                             <label class="form-label" for="password">Confirm Password</label>

@@ -138,7 +138,7 @@ if (isset($_POST['login'])) {
                                     <form class="user" method="POST">
                                         <div class="form-group">
                                             <input type="text" name="user" class="form-control form-control-user" 
-                                                id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email...">
+                                                id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="pass" class="form-control form-control-user" 
