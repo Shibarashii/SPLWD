@@ -32,7 +32,7 @@
                     <div class="col-lg-6">
                         <div class="p-3">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account</h1>
                             </div>
                             <?php if (isset($_GET['error'])) { ?>
                                 <form class="user" method="post" action="add_account.php">
@@ -230,7 +230,7 @@
                                 </form>
                             <?php } ?>
                             <div class="text-center">
-                                <a class="small" href="index.php">Already have an account? Login!</a>
+                                <a class="small" href="index.php">Already have an account? Login</a>
                             </div>
                         </div>
                     </div>

@@ -74,7 +74,7 @@
                     <td><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="birt_date" placeholder="<?php echo $row['birth_date']; ?>" readonly="readonly"></td>
                   </tr>
                 </table>
-                <button class="button btn-secondary float-right" type="button" data-toggle="modal" data-target="#myModal">Update Profile</button>
+                <button class="button btn-primary float-right" type="button" data-toggle="modal" data-target="#myModal">Update Profile</button>
               </form>
               <div class="modal" id="myModal">
                 <div class="modal-dialog">

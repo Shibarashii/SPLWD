@@ -118,10 +118,10 @@ if (isset($_POST['confirm_email'])) {
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="signup.php">Create an Account!</a>
+                                        <a class="small" href="signup.php">Create an Account</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="index.php">Already have an account? Login!</a>
+                                        <a class="small" href="index.php">Already have an account? Login</a>
                                     </div>
                                 </div>
                             </div>

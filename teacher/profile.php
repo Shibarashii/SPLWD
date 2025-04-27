@@ -90,7 +90,7 @@ $latest_activity = $log_row ? $log_row['action_type'] : 'No activity';
                                             <input type="file" style="visibility:hidden;" name="fileToUpload1" id="fileToUpload1" onchange="preview()">
                                         </div>
                                         <div class="col-md-4">
-                                            <input type="submit" class="btn btn-secondary" style="font-size:13px;" value="Update">
+                                            <input type="submit" class="btn btn-primary" style="font-size:13px;" value="Update">
                                         </div>
                                     </div>
                                 </form>
@@ -111,7 +111,7 @@ $latest_activity = $log_row ? $log_row['action_type'] : 'No activity';
                                 <div style="font-size:18px;" class="mb-2 mt-2"><b>Birth Date: </b></div>
                                 <div><input style="color:black;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="birt_date" placeholder="<?php echo htmlspecialchars($row['birth_date']); ?>" readonly="readonly"></div>
 
-                                <button class="button btn btn-secondary float-right mt-3" type="button" data-toggle="modal" data-target="#myModal">Update Profile</button>
+                                <button class="button btn btn-primary float-right mt-3" type="button" data-toggle="modal" data-target="#myModal">Update Profile</button>
                             </form>
 
                             <div class="modal" id="myModal">
