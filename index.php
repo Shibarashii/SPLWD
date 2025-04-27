@@ -151,7 +151,7 @@ if (isset($_POST['login'])) {
                                         <a class="small" href="forgot_password.php">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="signup.php">Create an Account!</a>
+                                        <a class="small" href="signup.php">Create an Account</a>
                                     </div>
                                 </div>
                             </div>
