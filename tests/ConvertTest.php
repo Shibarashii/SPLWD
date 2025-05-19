@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class MockMysqliResult {
+class MockMysqliResultConTest {
     private $data;
     private $index = 0;
 
@@ -18,7 +18,7 @@ class MockMysqliResult {
     }
 }
 
-class MockMysqli {
+class MockMysqliCT {
     private $results;
 
     public function __construct($results = []) {
@@ -26,7 +26,7 @@ class MockMysqli {
     }
 
     public function query($sql) {
-        return new MockMysqliResult($this->results[$sql] ?? []);
+        return new MockMysqliResultConTest($this->results[$sql] ?? []);
     }
 }
 
@@ -36,7 +36,7 @@ class ConvertTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->conn = new MockMysqli([
+        $this->conn = new MockMysqliCT([
             "SHOW TABLES" => [
                 ['users'],
                 ['products'],
@@ -63,7 +63,7 @@ class ConvertTest extends TestCase
 
     public function testEmptyTableList()
     {
-        $emptyConn = new MockMysqli([
+        $emptyConn = new MockMysqliCT([
             "SHOW TABLES" => []
         ]);
 
