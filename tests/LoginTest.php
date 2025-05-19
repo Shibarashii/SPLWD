@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class MockMysqliResult {
+class MockMysqliResultLoginTest {
     private $data;
     private $index = 0;
 
@@ -18,7 +18,7 @@ class MockMysqliResult {
     }
 }
 
-class MockMysqli {
+class MockMysqliLT {
     private $results;
 
     public function __construct($results = []) {
@@ -26,7 +26,7 @@ class MockMysqli {
     }
 
     public function query($sql) {
-        return new MockMysqliResult($this->results[$sql] ?? []);
+        return new MockMysqliResultLoginTest($this->results[$sql] ?? []);
     }
 
     public function real_escape_string($string) {
@@ -41,7 +41,7 @@ class LoginTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->conn = new MockMysqli([
+        $this->conn = new MockMysqliLT([
             "SELECT * FROM new_student WHERE lrn = 'student123'" => [
                 ['lrn' => 'student123', 'password' => password_hash('pass123', PASSWORD_DEFAULT), 'guardian' => 'Parent Name']
             ],
