@@ -177,7 +177,7 @@ SPLWD/
 ├── docs/                         # Project documentation
 │   ├── SRS.pdf                        # Software Requirements Specification
 │   └── TechnicalDocumentation.pdf     # Technical documentation
-├── src
+├── src/
 │    ├── database/                     # Database-related files
 │    │   └── sc_district.sql           # Database file
 │    ├── tests/                        # PHPUnit test files
