@@ -175,25 +175,26 @@ composer test test/specific_test_file.php
 ```plaintext
 SPLWD/
 ├── docs/                         # Project documentation
-│   ├── SRS.pdf                    # Software Requirements Specification
-│   └── TechnicalDocumentation.pdf # Technical documentation
-├── database/                     # Database-related files
-│   └── sc_district.sql           # Database file
-├── tests/                        # PHPUnit test files
-│   └── sub/                      # Sub unit tests
-├── vendor/                       # Composer dependencies
+│   ├── SRS.pdf                        # Software Requirements Specification
+│   └── TechnicalDocumentation.pdf     # Technical documentation
+├── src
+│    ├── database/                     # Database-related files
+│    │   └── sc_district.sql           # Database file
+│    ├── tests/                        # PHPUnit test files
+│    │   └── sub/                      # Sub unit tests
+│    ├── vendor/                       # Composer dependencies
+│    ├── .env.example                  # Environment configuration template
+│    ├── .env                          # Environment configuration (not in repo)
+│    ├── composer.json                 # PHP dependencies
+│    ├── composer.lock                 # Locked dependency versions
+│    ├── phpunit.xml                   # PHPUnit configuration
+│    ├── .gitignore                    # Git ignore rules
+│    ├── index.php                     # Main application entry point
+│    ├── principal/                    # Principal user interface
+│    ├── secretary/                    # Secretary user interface
+│    └── teacher/                      # Teacher user interface
 ├── .github/                      # GitHub templates and workflows
 │   └── PULL_REQUEST_TEMPLATE.md  # PR template
-├── .env.example                  # Environment configuration template
-├── .env                          # Environment configuration (not in repo)
-├── composer.json                 # PHP dependencies
-├── composer.lock                 # Locked dependency versions
-├── phpunit.xml                   # PHPUnit configuration
-├── .gitignore                    # Git ignore rules
-├── index.php                     # Main application entry point
-├── principal/                    # Principal user interface
-├── secretary/                    # Secretary user interface
-├── teacher/                      # Teacher user interface
 ├── LICENSE                       # MIT License file
 ├── CONTRIBUTING.md               # Contribution guidelines
 ├── CODE_OF_CONDUCT.md            # Code of conduct
