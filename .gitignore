@@ -1,3 +1,3 @@
-.env
-.phpunit.result.cache
+/src/.env
+/src/.phpunit.result.cache
 /docs/*.md
