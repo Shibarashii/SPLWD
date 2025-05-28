@@ -12,10 +12,12 @@ The system provides a secure, role-based platform for managing student profiles,
 - **Codebase Cleaning**: Removed redundant and unused code segments
 - **Refactoring**: Implemented modern design patterns (MVC, Repository, Factory)
 - **Code Standards**: Consistent naming conventions and formatting
-
+- **Uncluttered Files**: Improved the source code readability by removing unncessary files and cluttered code structure.
+- **Improved System Scalability**: Enabled compatibility for the system to support future upgrades and newer technologies.
 
 ### 🔒 Security Enhancements
 - **Environment Configuration**: Moved hardcoded credentials to .env files
+
 ### 🎨 UI/UX Improvements
 - **Modern Interface**: Updated typography, padding, and element positioning
 - **User Experience**: Streamlined workflows and improved navigation
