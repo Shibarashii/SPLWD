@@ -224,6 +224,7 @@ Need help? Check out our [Support Guide](SUPPORT.md) for various ways to get ass
 
 - **Mhar Andrei C. Macapallag** - Project Lead, Full-Stack Developer, Documentation Owner
 - **Eldi Nill L. Driz** - Quality Assurance
+- **[Lagay nyo name nyo dito]** - Contributors
 
 ### Acknowledgments
 
