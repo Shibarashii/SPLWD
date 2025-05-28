@@ -223,7 +223,11 @@ Need help? Check out our [Support Guide](SUPPORT.md) for various ways to get ass
 ### Project Lead & Development Team
 
 - **Mhar Andrei C. Macapallag** - Project Lead, Full-Stack Developer, Documentation Owner
+- **Seanrei Ethan Valdeabella** - System Developer, Designer
+- **Eldi Nill L. Driz** - Quality Assurance
 - **Vanesse V. Reyes** - Tester, Documentation
+- **[Lagay nyo name nyo dito]** - Contributors
+
 
 ### Acknowledgments
 
