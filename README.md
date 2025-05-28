@@ -223,7 +223,7 @@ Need help? Check out our [Support Guide](SUPPORT.md) for various ways to get ass
 ### Project Lead & Development Team
 
 - **Mhar Andrei C. Macapallag** - Project Lead, Full-Stack Developer, Documentation Owner
-- **[Lagay nyo name nyo dito]** - Contributors
+- **Vanesse V. Reyes** - Tester, Documentation
 
 ### Acknowledgments
 
