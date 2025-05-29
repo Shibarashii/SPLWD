@@ -227,6 +227,7 @@ Need help? Check out our [Support Guide](SUPPORT.md) for various ways to get ass
 - **Eldi Nill L. Driz** - Quality Assurance
 - **Vanesse V. Reyes** - Tester, Documentation
 - **Keayon Ivan V. Romero** - Tester
+- **Carlo James G. Arat** - [Tester](https://archlinux.org/)
 
 
 ### Acknowledgments
