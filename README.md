@@ -86,7 +86,7 @@ cd SPLWD
 **Step 2: Install Dependencies**
 
 ```bash
-composer install
+composer install # Skip if you're running on windows
 ```
 
 **Step 3: Environment Configuration**
@@ -99,6 +99,7 @@ cp .env.example .env
 **Step 4: Database Setup**
 
 ```sql
+# Skip if you're running on windows, just skip directly and import the database file
 CREATE DATABASE sc_district;
 CREATE USER 'splwd_user'@'localhost' IDENTIFIED BY 'your_secure_password';
 GRANT ALL PRIVILEGES ON sc_district.* TO 'splwd_user'@'localhost';
@@ -127,7 +128,7 @@ mysql -u splwd_user -p sc_district < database/schema.sql
 ### Development Environment
 
 ```bash
-# Install development dependencies
+# Install development dependencies, skip if you're running on windows
 composer install --dev
 
 # Run tests to verify setup
@@ -140,7 +141,7 @@ php -S localhost:8000
 ### Production Deployment
 
 ```bash
-# Install production dependencies
+# Install production dependencies, skip if you're running on windows
 composer install --no-dev --optimize-autoloader
 
 # Set proper file permissions
